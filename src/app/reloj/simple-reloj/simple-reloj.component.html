@@ -1,0 +1,6 @@
+<div class="reloj">
+  <h2>Reloj Simple</h2>
+  <p>Hora actual: {{ currentTime.toLocaleTimeString() }}</p>
+  <input type="range" min="-60" max="60" [(ngModel)]="offsetMinutes" (ngModelChange)="changeTime($event)">
+  <p>Ajuste de minutos: {{ offsetMinutes }}</p>
+</div>
