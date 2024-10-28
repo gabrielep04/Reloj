@@ -1,7 +1,25 @@
 <nav>
-    <ul>
-      <li><a routerLink="/reloj/simple">Reloj Simple</a></li>
-      <!-- Se irán agregando más relojes -->
-    </ul>
-  </nav>
-  
+  <ul>
+    <li>
+      <button 
+        [class.active]="isRouteActive('/reloj/simple')" 
+        (click)="navigateTo('/reloj/simple')">
+        Reloj Simple
+      </button>
+    </li>
+    <li>
+      <button 
+        [class.active]="isRouteActive('/reloj/fases-lunares')" 
+        (click)="navigateTo('/reloj/fases-lunares')">
+        Fases Lunares
+      </button>
+    </li>
+    <li>
+      <button 
+        [class.active]="isRouteActive('/reloj/espiral')" 
+        (click)="navigateTo('/reloj/espiral')">
+        Reloj Espiral
+      </button>
+    </li>
+  </ul>
+</nav>

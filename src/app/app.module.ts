@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar/sidebar.component';
 import { FormsModule } from '@angular/forms';
+import { SidebarModule } from './sidebar/sidebar.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SidebarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
