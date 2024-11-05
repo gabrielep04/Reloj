@@ -8,7 +8,7 @@
   color: #f0f0f0; 
   margin-left: 300px;
   border-radius: 8px;
-  width: 74%;
+  width: 80%;
   height: 710px;
   border: 0.5px solid rgb(191, 189, 189);
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); 
@@ -19,6 +19,13 @@
   font-size: 2.5rem; 
   font-weight: 300; 
   color: #ffffff; 
+}
+
+.reloj .hora {
+  font-size: 8rem; /* Tamaño gigante para la hora */
+  font-weight: bold;
+  color: #ffffff; /* Blanco para buen contraste */
+  margin: 20px 0;
 }
 
 .reloj p {
@@ -66,10 +73,4 @@ input[type="range"]::-ms-thumb {
   background: #1e90ff;
   border-radius: 50%;
   cursor: pointer;
-}
-
-.reloj .offset-minutes {
-  font-size: 1.75rem; 
-  margin-top: 20px;
-  color: #00bfff; 
 }

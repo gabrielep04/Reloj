@@ -52,7 +52,14 @@
     background: #00bfff; 
   }
   
-  input[type="range"]::-moz-range-thumb,
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #1e90ff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
   input[type="range"]::-ms-thumb {
     width: 20px;
     height: 20px;
@@ -64,6 +71,6 @@
   .espiral-reloj .offset-minutes {
     font-size: 1.75rem; 
     margin-top: 20px;
-    color: #00bfff; 
+    color: white; 
   }
   

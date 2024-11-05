@@ -1,0 +1,13 @@
+<div class="sol-reloj">
+    <h2>Reloj Solar</h2>
+    <div class="sombra-container">
+      <div class="eje"></div>
+      <div class="sombra" [ngStyle]="{'transform': 'rotate(' + shadowAngle + 'deg)'}"></div>
+      <div class="numeros">
+        <span *ngFor="let hora of horas" [style.transform]="'rotate(' + hora.rotacion + 'deg)'">{{hora.valor}}</span>
+      </div>
+    </div>
+    <p class="hora">{{ hours }}:{{ minutes | number: '2.0' }}:{{ seconds | number: '2.0' }}</p>
+    <input type="range" min="0" max="23" [(ngModel)]="hours" (input)="updateShadow()">
+  </div>
+  
