@@ -74,13 +74,17 @@ export class SolRelojComponent implements OnInit, OnDestroy {
   }
 
   updateShadow() {
-    // Calcula el ángulo de la sombra basado en la hora, solo entre 0 y 180 grados
-    // El reloj solar está orientado para que 12:00 esté en la parte superior
     if (this.hours >= 6 && this.hours <= 18) {
-      // La sombra solo se proyecta entre 6 AM y 6 PM
-      this.shadowAngle = ((this.hours - 6) / 12) * 180; // Mapea de 6-18 horas a 0-180 grados
+        const fractionalHour = (this.hours) + this.minutes / 60;
+        this.shadowAngle = (fractionalHour / 12) * 180;
+
+        // Calcular y asignar la rotación para cada hora
+        this.horas.forEach((hora, index) => {
+            const angle = (hora.valor - 6) * 15; // Ajustar el ángulo para cada hora (6, 7, ..., 18)
+            hora.rotacion = angle;
+        });
     } else {
-      this.shadowAngle = 0; // Sin sombra fuera del horario de funcionamiento
+        this.shadowAngle = 0;
     }
-  }
+}
 }

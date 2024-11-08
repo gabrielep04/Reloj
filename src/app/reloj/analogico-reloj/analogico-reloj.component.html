@@ -1,0 +1,7 @@
+<div class="analogico-reloj">
+    <h2>Reloj Analógico</h2>
+    <canvas #canvas width="600" height="500"></canvas>
+    <p class="offset-minutes">Ajuste de minutos: {{ offsetMinutes }}</p>
+    <input type="range" min="-60" max="60" [(ngModel)]="offsetMinutes" (input)="updateTime()" />
+  </div>
+  

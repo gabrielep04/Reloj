@@ -21,5 +21,12 @@
         Reloj Solar
       </button>
     </li>
+    <li>
+      <button 
+        [class.active]="isRouteActive('/reloj/analogico')" 
+        (click)="navigateTo('/reloj/analogico')">
+        Reloj Analogico
+      </button>
+    </li>
   </ul>
 </nav>

@@ -5,12 +5,16 @@ import { SimpleRelojComponent } from './simple-reloj/simple-reloj.component';
 import { FormsModule } from '@angular/forms';
 import { EspiralRelojComponent } from './espiral-reloj/espiral-reloj.component';
 import { SolRelojComponent } from './sol-reloj/sol-reloj.component';
+import { AnalogicoRelojComponent } from './analogico-reloj/analogico-reloj.component';
+import { BarraRelojComponent } from './barra-reloj/barra-reloj.component';
 
 @NgModule({
   declarations: [
     SimpleRelojComponent,
     EspiralRelojComponent,
-    SolRelojComponent
+    SolRelojComponent,
+    AnalogicoRelojComponent,
+    BarraRelojComponent
   ],
   imports: [
     CommonModule,
