@@ -8,6 +8,7 @@ import { SolRelojComponent } from './sol-reloj/sol-reloj.component';
 import { AnalogicoRelojComponent } from './analogico-reloj/analogico-reloj.component';
 import { BarraRelojComponent } from './barra-reloj/barra-reloj.component';
 import { EscritoRelojComponent } from './escrito-reloj/escrito-reloj.component';
+import { BinaryRelojComponent } from './binary-reloj/binary-reloj.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EscritoRelojComponent } from './escrito-reloj/escrito-reloj.component';
     SolRelojComponent,
     AnalogicoRelojComponent,
     BarraRelojComponent,
-    EscritoRelojComponent
+    EscritoRelojComponent,
+    BinaryRelojComponent
   ],
   imports: [
     CommonModule,

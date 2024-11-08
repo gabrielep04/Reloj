@@ -42,5 +42,12 @@
         Reloj Escrito
       </button>
     </li>
+    <li>
+      <button 
+        [class.active]="isRouteActive('/reloj/binario')" 
+        (click)="navigateTo('/reloj/binario')">
+        Reloj Binario
+      </button>
+    </li>
   </ul>
 </nav>

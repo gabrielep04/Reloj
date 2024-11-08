@@ -6,6 +6,7 @@ import { SolRelojComponent } from './sol-reloj/sol-reloj.component';
 import { AnalogicoRelojComponent } from './analogico-reloj/analogico-reloj.component';
 import { BarraRelojComponent } from './barra-reloj/barra-reloj.component';
 import { EscritoRelojComponent } from './escrito-reloj/escrito-reloj.component';
+import { BinaryRelojComponent } from './binary-reloj/binary-reloj.component';
 
 const routes: Routes = [
   { path: 'simple', component: SimpleRelojComponent },
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'sol', component: SolRelojComponent },
   { path: 'analogico', component: AnalogicoRelojComponent },
   { path: 'barra', component: BarraRelojComponent },
-  { path: 'escrito', component: EscritoRelojComponent }
+  { path: 'escrito', component: EscritoRelojComponent },
+  { path: 'binario', component: BinaryRelojComponent }
 ];
 
 @NgModule({

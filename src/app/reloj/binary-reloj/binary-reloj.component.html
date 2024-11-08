@@ -1,0 +1,24 @@
+<div class="binary-reloj">
+    <h2>Reloj Binario</h2>
+  
+    <div class="binary-row">
+      <h3 class="horas">Horas</h3>
+      <div class="binary-block" *ngFor="let bit of binaryHours" [class.on]="bit"></div>
+    </div>
+    
+    <div class="binary-row">
+      <h3 class="minutos">Minutos</h3>
+      <div class="binary-block" *ngFor="let bit of binaryMinutes" [class.on]="bit"></div>
+    </div>
+    
+    <div class="binary-row">
+      <h3 class="segundos">Segundos</h3>
+      <div class="binary-block" *ngFor="let bit of binarySeconds" [class.on]="bit"></div>
+    </div>
+  
+    <p>{{ currentTime.toLocaleTimeString() }}</p>
+  
+    <input type="range" min="-60" max="60" [(ngModel)]="offsetMinutes" (ngModelChange)="changeTime($event)">
+    <p>Ajuste de minutos: {{ offsetMinutes }}</p>
+  </div>
+  
