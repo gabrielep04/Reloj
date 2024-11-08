@@ -1,0 +1,91 @@
+.circular-reloj {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+    margin-left: 300px;
+    border-radius: 8px;
+    width: 80%;
+    height: 710px;
+    border: 0.5px solid rgb(191, 189, 189);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  .progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .circle {
+    fill: none;
+    stroke-width: 10;
+    transform: rotate(-90deg); /* Empieza en la parte superior */
+    transform-origin: 50% 50%;
+  }
+  
+  .hour-circle {
+    stroke: #ff4500;
+    stroke-dasharray: 565.48; /* Circunferencia del círculo de las horas */
+    stroke-dashoffset: calc(565.48 - var(--hour-progress));
+    transition: ease 0.5s;
+  }
+  
+  .minute-circle {
+    stroke: #ffd700;;
+    stroke-dasharray: 439.6; /* Circunferencia del círculo de los minutos */
+    stroke-dashoffset: calc(439.6 - var(--minute-progress));
+    transition: ease 0.5s;
+  }
+  
+  .second-circle {
+    stroke: #1e90ff;
+    stroke-dasharray: 314.16; /* Circunferencia del círculo de los segundos */
+    stroke-dashoffset: calc(314.16 - var(--second-progress));
+    transition: ease 0.5s;
+  }
+  
+  input[type="range"] {
+    width: 80%;
+    height: 8px;
+    margin: 30px 0;
+    appearance: none;
+    -webkit-appearance: none;
+    background: #4f4f4f;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #1e90ff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb:hover {
+    background: #00bfff;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #1e90ff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #1e90ff;
+    border-radius: 50%;
+    cursor: pointer;
+  }

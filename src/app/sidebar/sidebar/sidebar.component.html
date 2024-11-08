@@ -56,5 +56,19 @@
         Reloj Escrito-Giratorio
       </button>
     </li>
+    <li>
+      <button 
+        [class.active]="isRouteActive('/reloj/circular')" 
+        (click)="navigateTo('/reloj/circular')">
+        Reloj Circular
+      </button>
+    </li>
+    <li>
+      <button 
+        [class.active]="isRouteActive('/reloj/display')" 
+        (click)="navigateTo('/reloj/display')">
+        Reloj Display
+      </button>
+    </li>
   </ul>
 </nav>

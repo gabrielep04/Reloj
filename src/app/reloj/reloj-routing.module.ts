@@ -8,6 +8,8 @@ import { BarraRelojComponent } from './barra-reloj/barra-reloj.component';
 import { EscritoRelojComponent } from './escrito-reloj/escrito-reloj.component';
 import { BinaryRelojComponent } from './binary-reloj/binary-reloj.component';
 import { AnalogicWordRelojComponent } from './analogicword-reloj/analogicword-reloj.component';
+import { CircularRelojComponent } from './circular-reloj/circular-reloj.component';
+import { DisplayRelojComponent } from './display-reloj/display-reloj.component';
 
 const routes: Routes = [
   { path: 'simple', component: SimpleRelojComponent },
@@ -17,7 +19,9 @@ const routes: Routes = [
   { path: 'barra', component: BarraRelojComponent },
   { path: 'escrito', component: EscritoRelojComponent },
   { path: 'binario', component: BinaryRelojComponent },
-  { path: 'analogicword', component: AnalogicWordRelojComponent }
+  { path: 'analogicword', component: AnalogicWordRelojComponent },
+  { path: 'circular', component: CircularRelojComponent },
+  { path: 'display', component: DisplayRelojComponent }
 ];
 
 @NgModule({

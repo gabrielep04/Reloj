@@ -38,7 +38,7 @@ export class BarraRelojComponent implements OnInit, OnDestroy {
     now.setMinutes(now.getMinutes() + this.offsetMinutes);
     this.currentTime = now;
 
-    this.hourLevel = (this.currentTime.getHours() % 12) * 100 / 24;
+    this.hourLevel = (this.currentTime.getHours() % 24) * 100 / 24;
     this.minuteLevel = this.currentTime.getMinutes() * 100 / 60;
     this.secondLevel = this.currentTime.getSeconds() * 100 / 60;
   }

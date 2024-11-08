@@ -1,0 +1,17 @@
+<div class="circular-reloj">
+    <h2>Reloj Circular de Barras de Progreso</h2>
+    <div class="progress-container">
+      <svg width="300" height="300">
+        <circle class="circle hour-circle" r="90" cx="150" cy="150"
+                [style.strokeDashoffset]="hourCircleLength - hourProgress"></circle>
+        <circle class="circle minute-circle" r="70" cx="150" cy="150"
+                [style.strokeDashoffset]="minuteCircleLength - minuteProgress"></circle>
+        <circle class="circle second-circle" r="50" cx="150" cy="150"
+                [style.strokeDashoffset]="secondCircleLength - secondProgress"></circle>
+      </svg>
+    </div>
+    <h2 class="hora">{{ currentTime.toLocaleTimeString() }}</h2>
+    <input type="range" min="-60" max="60" [(ngModel)]="offsetMinutes" (ngModelChange)="changeTime($event)">
+    <p>Ajuste de minutos: {{ offsetMinutes }}</p>
+  </div>
+  
