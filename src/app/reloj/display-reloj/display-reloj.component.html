@@ -1,40 +1,46 @@
-<div class="display-reloj">
-    <div class="seven-segment-display">
-      <!-- Display para las Horas -->
-      <div class="digit" *ngFor="let digit of getDigits(currentTime.getHours())">
-        <div class="segment segment-a" [class.active]="digit.segments.a"></div>
-        <div class="segment segment-b" [class.active]="digit.segments.b"></div>
-        <div class="segment segment-c" [class.active]="digit.segments.c"></div>
-        <div class="segment segment-d" [class.active]="digit.segments.d"></div>
-        <div class="segment segment-e" [class.active]="digit.segments.e"></div>
-        <div class="segment segment-f" [class.active]="digit.segments.f"></div>
-        <div class="segment segment-g" [class.active]="digit.segments.g"></div>
-      </div>
-  
-      <!-- Display para los Minutos -->
-      <div class="digit" *ngFor="let digit of getDigits(currentTime.getMinutes())">
-        <div class="segment segment-a" [class.active]="digit.segments.a"></div>
-        <div class="segment segment-b" [class.active]="digit.segments.b"></div>
-        <div class="segment segment-c" [class.active]="digit.segments.c"></div>
-        <div class="segment segment-d" [class.active]="digit.segments.d"></div>
-        <div class="segment segment-e" [class.active]="digit.segments.e"></div>
-        <div class="segment segment-f" [class.active]="digit.segments.f"></div>
-        <div class="segment segment-g" [class.active]="digit.segments.g"></div>
-      </div>
-  
-      <!-- Display para los Segundos -->
-      <div class="digit" *ngFor="let digit of getDigits(currentTime.getSeconds())">
-        <div class="segment segment-a" [class.active]="digit.segments.a"></div>
-        <div class="segment segment-b" [class.active]="digit.segments.b"></div>
-        <div class="segment segment-c" [class.active]="digit.segments.c"></div>
-        <div class="segment segment-d" [class.active]="digit.segments.d"></div>
-        <div class="segment segment-e" [class.active]="digit.segments.e"></div>
-        <div class="segment segment-f" [class.active]="digit.segments.f"></div>
-        <div class="segment segment-g" [class.active]="digit.segments.g"></div>
-      </div>
+<div class="clock">
+  <div class="title">Reloj Display</div>
+
+  <div class="reloj">
+    <!-- Dígitos para horas -->
+    <div class="digit" *ngFor="let digit of getDigits(hours)">
+      <div class="segment a" [ngClass]="getSegmentClass(digit, 0)"></div>
+      <div class="segment b" [ngClass]="getSegmentClass(digit, 1)"></div>
+      <div class="segment c" [ngClass]="getSegmentClass(digit, 2)"></div>
+      <div class="segment d" [ngClass]="getSegmentClass(digit, 3)"></div>
+      <div class="segment e" [ngClass]="getSegmentClass(digit, 4)"></div>
+      <div class="segment f" [ngClass]="getSegmentClass(digit, 5)"></div>
+      <div class="segment g" [ngClass]="getSegmentClass(digit, 6)"></div>
     </div>
-    
-    <!-- Slider para ajustar el tiempo -->
-    <input type="range" min="-60" max="60" [(ngModel)]="offsetMinutes" (ngModelChange)="changeTime($event)">
+    <div class="separator">:</div>
+
+    <!-- Dígitos para minutos -->
+    <div class="digit" *ngFor="let digit of getDigits(minutes)">
+      <div class="segment a" [ngClass]="getSegmentClass(digit, 0)"></div>
+      <div class="segment b" [ngClass]="getSegmentClass(digit, 1)"></div>
+      <div class="segment c" [ngClass]="getSegmentClass(digit, 2)"></div>
+      <div class="segment d" [ngClass]="getSegmentClass(digit, 3)"></div>
+      <div class="segment e" [ngClass]="getSegmentClass(digit, 4)"></div>
+      <div class="segment f" [ngClass]="getSegmentClass(digit, 5)"></div>
+      <div class="segment g" [ngClass]="getSegmentClass(digit, 6)"></div>
+    </div>
+    <div class="separator">:</div>
+
+    <!-- Dígitos para segundos -->
+    <div class="digit" *ngFor="let digit of getDigits(seconds)">
+      <div class="segment a" [ngClass]="getSegmentClass(digit, 0)"></div>
+      <div class="segment b" [ngClass]="getSegmentClass(digit, 1)"></div>
+      <div class="segment c" [ngClass]="getSegmentClass(digit, 2)"></div>
+      <div class="segment d" [ngClass]="getSegmentClass(digit, 3)"></div>
+      <div class="segment e" [ngClass]="getSegmentClass(digit, 4)"></div>
+      <div class="segment f" [ngClass]="getSegmentClass(digit, 5)"></div>
+      <div class="segment g" [ngClass]="getSegmentClass(digit, 6)"></div>
+    </div>
   </div>
-  
+
+  <!-- Control de ajuste de minutos -->
+  <div class="range-container">
+    <input type="range" min="-60" max="60" [(ngModel)]="offsetMinutes" (ngModelChange)="changeMinutes($event)">
+    <p>Ajuste de minutos: {{ offsetMinutes }}</p>
+  </div>
+</div>
