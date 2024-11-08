@@ -28,5 +28,12 @@
         Reloj Analogico
       </button>
     </li>
+    <li>
+      <button 
+        [class.active]="isRouteActive('/reloj/barra')" 
+        (click)="navigateTo('/reloj/barra')">
+        Reloj Barra
+      </button>
+    </li>
   </ul>
 </nav>

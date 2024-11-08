@@ -1,1 +1,16 @@
-<p>barra-reloj works!</p>
+<div class="barra-reloj">
+    <h2>Reloj de Barras</h2>
+  
+    <!-- Barras -->
+    <div class="barra-container">
+      <div class="barra" [style.height.%]="hourLevel"></div>
+      <div class="barra" [style.height.%]="minuteLevel"></div>
+      <div class="barra" [style.height.%]="secondLevel"></div>
+    </div>
+  
+    <p class="hora">{{ currentTime.toLocaleTimeString() }}</p>
+    
+    <!-- Control de minutos -->
+    <input type="range" min="-60" max="60" [(ngModel)]="offsetMinutes" (ngModelChange)="changeTime($event)">
+    <p>Ajuste de minutos: {{ offsetMinutes }}</p>
+</div>
