@@ -1,0 +1,7 @@
+<div class="analogicword-reloj">
+    <h1>Reloj Escrito-giratorio</h1>
+    <canvas #canvas width="500" height="500"></canvas>
+    <input type="range" min="-60" max="60" [(ngModel)]="offsetMinutes" (input)="updateTime()" />
+    <p>Ajuste de minutos: {{ offsetMinutes }}</p>
+  </div>
+  

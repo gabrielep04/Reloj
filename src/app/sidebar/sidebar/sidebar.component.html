@@ -49,5 +49,12 @@
         Reloj Binario
       </button>
     </li>
+    <li>
+      <button 
+        [class.active]="isRouteActive('/reloj/analogicword')" 
+        (click)="navigateTo('/reloj/analogicword')">
+        Reloj Escrito-Giratorio
+      </button>
+    </li>
   </ul>
 </nav>
