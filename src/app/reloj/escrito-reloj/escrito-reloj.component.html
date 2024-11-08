@@ -1,0 +1,10 @@
+<div class="escrito-reloj">
+    <h3>Reloj Escrito</h3>
+    <p class="time-text hour">{{ getHourText() }}</p>
+    <p class="time-text minute">{{ getMinuteText() }}</p>
+    <p class="time-text second">{{ getSecondText() }}</p>
+
+    <!-- Control de minutos -->
+    <input type="range" min="-60" max="60" [(ngModel)]="offsetMinutes" (ngModelChange)="changeTime($event)">
+    <p>Ajuste de minutos: {{ offsetMinutes }}</p>
+</div>

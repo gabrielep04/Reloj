@@ -35,5 +35,12 @@
         Reloj Barra
       </button>
     </li>
+    <li>
+      <button 
+        [class.active]="isRouteActive('/reloj/escrito')" 
+        (click)="navigateTo('/reloj/escrito')">
+        Reloj Escrito
+      </button>
+    </li>
   </ul>
 </nav>
