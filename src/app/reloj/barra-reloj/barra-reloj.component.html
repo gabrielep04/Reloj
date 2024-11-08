@@ -3,9 +3,18 @@
   
     <!-- Barras -->
     <div class="barra-container">
-      <div class="barra" [style.height.%]="hourLevel"></div>
-      <div class="barra" [style.height.%]="minuteLevel"></div>
-      <div class="barra" [style.height.%]="secondLevel"></div>
+      <div class="barra-item">
+        <div class="barra" [ngStyle]="getHourLevelStyle()"></div>
+        <span class="percentage">{{ hourLevel | number: '1.0-0' }}%</span>
+      </div>
+      <div class="barra-item">
+        <div class="barra" [ngStyle]="getMinuteLevelStyle()"></div>
+        <span class="percentage">{{ minuteLevel | number: '1.0-0' }}%</span>
+      </div>
+      <div class="barra-item">
+        <div class="barra" [ngStyle]="getSecondLevelStyle()"></div>
+        <span class="percentage">{{ secondLevel | number: '1.0-0' }}%</span>
+      </div>
     </div>
   
     <p class="hora">{{ currentTime.toLocaleTimeString() }}</p>
